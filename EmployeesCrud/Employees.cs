@@ -138,7 +138,7 @@ namespace BasicEmployeeCrudMySQL.EmployeesCrud
             }
         }
 
-        public void deleteEmployeeById(TextBox id)
+        public void deleteEmployeeById(TextBox id, TextBox name, TextBox lastname)
         {
 
             try
@@ -156,6 +156,9 @@ namespace BasicEmployeeCrudMySQL.EmployeesCrud
                     MessageBox.Show("Employee deleted");
 
                     id.Text = "";
+                    name.Text = "";
+                    lastname.Text = "";
+                    
 
                 }
                 else

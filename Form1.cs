@@ -60,7 +60,7 @@ namespace BasicEmployeeCrudMySQL
         {
 
             EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
-            employees.deleteEmployeeById(txtId);
+            employees.deleteEmployeeById(txtId, txtName, txtLastname);
 
             employees.showAllEmployees(dgvEmployee);
 
