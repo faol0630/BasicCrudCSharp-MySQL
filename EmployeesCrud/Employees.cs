@@ -102,6 +102,7 @@ namespace BasicEmployeeCrudMySQL.EmployeesCrud
 
                 name.Text = "";
                 lastname.Text = "";
+                id.Text = "";
 
                 while (mySqlDataReader.Read())
                 {
