@@ -19,6 +19,26 @@ namespace BasicEmployeeCrudMySQL
             EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
             employees.showAllEmployees(dgvEmployee);
 
+            this.BackColor = Color.FromArgb(81, 81, 81);
+
+            myColors();
+
+        }
+
+        private void myColors()
+        {
+
+            groupBox1.BackColor = Color.FromArgb(81, 81, 81);
+            groupBox1.ForeColor = Color.White;
+
+            dgvEmployee.BackgroundColor = Color.FromArgb(81, 81, 81);
+            dgvEmployee.ForeColor = Color.Black;
+
+            btnSave.ForeColor = Color.FromArgb(51, 51, 51);
+            btnUpdate.ForeColor = Color.FromArgb(51, 51, 51);
+            btnDelete.ForeColor = Color.FromArgb(51, 51, 51);
+            btnDeleteAll.ForeColor = Color.FromArgb(51, 51, 51);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
