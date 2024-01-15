@@ -55,5 +55,25 @@ namespace BasicEmployeeCrudMySQL
             EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
             employees.getEmployees(dgvEmployee, txtId, txtName, txtLastname);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
+            employees.deleteEmployeeById(txtId);
+
+            employees.showAllEmployees(dgvEmployee);
+
+        }
+
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+
+            EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
+            employees.deleteAll();
+
+            employees.showAllEmployees(dgvEmployee);
+
+        }
     }
 }
