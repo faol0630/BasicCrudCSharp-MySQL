@@ -15,6 +15,45 @@ namespace BasicEmployeeCrudMySQL
         public Form1()
         {
             InitializeComponent();
+
+            EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
+            employees.showAllEmployees(dgvEmployee);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
+            //crear nuevo employee:
+            employees.saveEmployee(txtName, txtLastname);
+
+            // refrescar la lista de employees:
+            employees.showAllEmployees(dgvEmployee);
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
+            //crear nuevo employee:
+            employees.updateEmployee(txtId, txtName, txtLastname);
+
+            // refrescar la lista de employees:
+            employees.showAllEmployees(dgvEmployee);
+
+        }
+
+        private void dgvEmployee_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EmployeesCrud.Employees employees = new EmployeesCrud.Employees();
+            employees.getEmployees(dgvEmployee, txtId, txtName, txtLastname);
         }
     }
 }

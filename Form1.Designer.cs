@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtLastname = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnDeleteAll = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvEmployee = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
@@ -63,81 +63,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee\'s info";
             // 
-            // dgvEmployee
+            // btnDeleteAll
             // 
-            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployee.Location = new System.Drawing.Point(625, 23);
-            this.dgvEmployee.Name = "dgvEmployee";
-            this.dgvEmployee.RowHeadersWidth = 62;
-            this.dgvEmployee.RowTemplate.Height = 28;
-            this.dgvEmployee.Size = new System.Drawing.Size(729, 502);
-            this.dgvEmployee.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Lastname";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(160, 51);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(365, 26);
-            this.txtId.TabIndex = 3;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(160, 107);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(365, 26);
-            this.txtName.TabIndex = 4;
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.Location = new System.Drawing.Point(160, 165);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(365, 26);
-            this.txtLastname.TabIndex = 5;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(48, 234);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(477, 43);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(48, 316);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(229, 46);
-            this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnDeleteAll.Location = new System.Drawing.Point(48, 405);
+            this.btnDeleteAll.Name = "btnDeleteAll";
+            this.btnDeleteAll.Size = new System.Drawing.Size(477, 44);
+            this.btnDeleteAll.TabIndex = 9;
+            this.btnDeleteAll.Text = "Delete All";
+            this.btnDeleteAll.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -148,14 +81,84 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnDeleteAll
+            // btnUpdate
             // 
-            this.btnDeleteAll.Location = new System.Drawing.Point(48, 405);
-            this.btnDeleteAll.Name = "btnDeleteAll";
-            this.btnDeleteAll.Size = new System.Drawing.Size(477, 44);
-            this.btnDeleteAll.TabIndex = 9;
-            this.btnDeleteAll.Text = "Delete All";
-            this.btnDeleteAll.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(48, 316);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(229, 46);
+            this.btnUpdate.TabIndex = 7;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(48, 234);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(477, 43);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.Location = new System.Drawing.Point(160, 165);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(365, 26);
+            this.txtLastname.TabIndex = 5;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(160, 107);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(365, 26);
+            this.txtName.TabIndex = 4;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(160, 51);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(365, 26);
+            this.txtId.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Lastname";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(44, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Name:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Id:";
+            // 
+            // dgvEmployee
+            // 
+            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployee.Location = new System.Drawing.Point(625, 23);
+            this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.RowHeadersWidth = 62;
+            this.dgvEmployee.RowTemplate.Height = 28;
+            this.dgvEmployee.Size = new System.Drawing.Size(729, 502);
+            this.dgvEmployee.TabIndex = 1;
+            this.dgvEmployee.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellDoubleClick);
             // 
             // Form1
             // 
